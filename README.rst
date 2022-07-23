@@ -15,7 +15,7 @@ Quick start
 2. Add in the "admin.py" file the fallow code:
 
     @admin.register(Example)
-    class ExampleAdmin(MLIBGEMixinAdmin, admin.ModelAdmin):
+    class ExampleAdmin(MLIBGEMixinAdmin):
         form = ExampleAdminForm
         change_form_template = "admin/example/example_change_form.html"
 
@@ -30,7 +30,7 @@ Quick start
 
 4. Add in the "forms.py" file the fallow code:
 
-    class ExampleAdminForm(MLIBGEMixinForm, forms.ModelForm):
+    class ExampleAdminForm(MLIBGEMixinForm):
         class Meta:
             ...
             fields = (... "state", "city", ...)
