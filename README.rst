@@ -12,7 +12,7 @@ Quick start
         'ml_ibge',
     ]
 
-2. Add in the "admin.py" file the fallow code:
+2. Add in the "admin.py" file the fallow code::
 
     @admin.register(Example)
     class ExampleAdmin(MLIBGEMixinAdmin):
@@ -20,7 +20,7 @@ Quick start
         change_form_template = "admin/example/example_change_form.html"
 
 
-3. Add in the "example_change_form.html" file the fallow javascript code:
+3. Add in the "example_change_form.html" file the fallow javascript code::
 
     {% extends "admin/change_form.html" %}
 
@@ -28,7 +28,7 @@ Quick start
         {% include "ml_ibge/admin/change_form_script.html" %}
     {% endblock %}
 
-4. Add in the "forms.py" file the fallow code:
+4. Add in the "forms.py" file the fallow code::
 
     class ExampleAdminForm(MLIBGEMixinForm):
         class Meta:
